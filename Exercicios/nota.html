@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    <h1>Media das Notas</h1>
+
+    <script>
+
+        var media;
+
+        var nota1 = prompt("Digite aqui o valor da primeira nota - ");
+        var nota2 = prompt("Digite aqui o valor da segunda nota - ");
+        var nota3 = prompt("Digite aqui o valor da terceira nota - ");
+        var nota4 = prompt("Digite aqui o valor da quarta nota - ");
+
+        console.log("O valor da primeira nota é: " + nota1);
+        console.log("O valor da segunda nota é: " + nota2);
+        console.log("O valor da terceira nota é: " + nota3);
+        console.log("O valor da quarta nota é: " + nota4);
+
+        media = (Number.parseFloat(nota1) + Number.parseFloat(nota2) + Number.parseFloat(nota3) + Number.parseFloat(nota4)) / 4
+
+        console.log("A média das notas é = " + media)
+
+    </script>
+</body>
+</html>

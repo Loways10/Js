@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros</title>
+</head>
+<body>
+    <h1>Numeros</h1>
+
+    <script>
+
+        var numero1;
+        var numero2;
+        var resultado;
+
+        numero1 = prompt("Digite aqui o primeiro numero");
+        numero2 = prompt("Digite aqui o segundo numero");
+
+        console.log("Primeiro numero - " + numero1 + " - Segundo numero - " + numero2);
+
+        resultado = Number.parseFloat(numero1) + Number.parseFloat(numero2);
+
+        console.log("O resultado da soma é: " + resultado)
+
+        resultado = Number.parseFloat(numero1) - Number.parseFloat(numero2);
+
+        console.log("O resultado da subtração é: " + resultado)
+
+        resultado = Number.parseFloat(numero1) / Number.parseFloat(numero2);
+
+        console.log("O resultado da divisão é: " + resultado)
+
+        resultado = Number.parseFloat(numero1) * Number.parseFloat(numero2);
+
+        console.log("O resultado da multiplicação é: " + resultado)
+
+        resultado = Number.parseFloat(numero1) ** Number.parseFloat(numero2);
+
+        console.log("O resultado da potencia é: " + resultado)
+
+        resultado = Number.parseFloat(numero1) % Number.parseFloat(numero2);
+
+        console.log("O resultado do modulo é: " + resultado)
+
+        console.log("Incrementar - " + numero1++ )
+        console.log("Valor incrementado - " + numero1)
+
+        console.log("Decrementar - " + --numero2)
+        console.log("Valor decrementado - " + numero2)
+
+    </script>
+</body>
+</html>
