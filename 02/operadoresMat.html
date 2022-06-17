@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Matemáticos</title>
+</head>
+<body>
+    <h1>Operadores Matemáticos</h1>
+
+    <script>
+        var n1 = 15;
+        var n2 = 2;
+        var result;
+
+        //Pegar os Valores
+
+        // Numero
+        console.log("Numero 1 = " + n1 + "Numero 2 = " + n2)
+        //Calculos
+
+            //Soma
+        result = n1 + n2;
+        console.log("Soma é = " + result)
+
+            //Subtração
+        result = n1 - n2;
+        console.log("Subtração é = " + result)
+
+            //Multiplicação
+        result = n1 * n2;
+        console.log("Multiplicação é = " + result)
+
+            //Diviisão
+        result = n1 / n2;
+        console.log("Divisão é = " + result)
+
+            //Potencia
+        result = n1 ** n2;
+        console.log("Potencia é = " + result)
+
+            //Modulo
+        result = n1 % n2;
+        console.log("Modulo é = " + result)
+
+            //Increment
+        console.log("Incremente = " + n1++) //mostra e depois soma, se for ++n1 incrementa e ja exibe
+
+            //Decrement
+        console.log("Decremente = " + n2--)
+
+        result = n1 + n2 / 2
+        console.log("Resultado = " + result) //segue as regras da matematica, divisão primeiro.
+
+        //Pegar os valores do usuario
+        var numero1 = prompt("Digite um valor = ")
+        var numero2 = prompt(" Digite outro valor = ")
+
+        console.log("Numero 1 = " + numero1 + "Numero 2 = " + numero2)
+
+        result = numero1 + numero2;
+        console.log("Soma é = " + result); //não funciona porque a inserção do valor é input, que é do tipo string
+
+        result = Number.parseFloat(numero1) + Number.parseInt(numero2);
+
+        console.log(typeof(Number(numero1)))
+        console.log(Number.parseFloat(numero1)) //Numer(var) //parse.Float(var) - parse.Innt(var)
+        console.log("Soma é = " + result);
+
+        //Convertendo para Variavel
+        console.log(typeof(result))
+        console.log(typeof(String(result)) + " = " + result + numero1)
+
+        //Tamanho da Variavel
+        var texto = "Akio Takashara"
+        console.log("Nume caract" + texto.length)
+
+     </script>
+</body>
+</html>
