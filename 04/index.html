@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 JS</title>
+    <style>
+        .titulo{
+            text-shadow: 2px 2px 5px black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .red{
+            color: red;
+        }
+        .size{
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="titulo">Aula</h1>
+   
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptates provident, eius distinctio sapiente iste accusantium architecto dicta error rem deserunt nobis harum animi minus tempora officia quaerat dolor assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptates provident, eius distinctio sapiente iste accusantium architecto dicta error rem deserunt nobis harum animi minus tempora officia quaerat dolor assumenda.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum voluptates provident, eius distinctio sapiente iste accusantium architecto dicta error rem deserunt nobis harum animi minus tempora officia quaerat dolor assumenda.</p>
+    </main>
+
+    <img src="../assets/img/logoFundoAzulVGA.jpg" id="testeImg">
+
+    <aside class="asd">
+
+    </aside>
+
+    <script>
+        var titulo = document.getElementsByTagName('h1')[0]; //capturei a tag h1 e coloquei na variavel titulo
+        titulo.innerText = titulo.innerText + " 04"; //Inserindo um novo valor ao atributo innerText
+        //titulo.innerText += " 04" tambem funciona ou titulo.innerText = "Aula 04"
+        console.log(titulo);
+
+        //Alterar a Classe
+        titulo.classList.add('red');
+        titulo.classList.add('size');
+        //Remover Class
+        titulo.classList.remove('titulo');
+
+        //Style
+        var main = document.querySelector('main');
+        console.log(main);
+        main.style.backgroundColor = '#cfc';
+        main.style.width = "50%";
+        main.style.margin = "auto";
+        main.style.padding = "20px";
+        main.style.color = "#f00";
+        main.style.fontSize = "1.2em";
+        main.style.boxShadow = "10px 10px 20px black";
+
+        //img
+        var img = document.getElementById('testeImg');
+        console.log(img);
+        img.style.marginTop = "100px";
+        img.style.width = "100%";
+        img.style.opacity = "0.5";
+        img.src = "../assets/img/icon.ico"
+
+        //ASIDE
+        var aside = document.getElementsByClassName('asd')[0];
+        console.log(aside);
+        aside.style.width = "100%"; //document.getElementsByClassName('asd')[0].style.width = "100%";
+        aside.style.height = "300px";
+        aside.style.marginTop = "100px";
+        aside.style.backgroundColor = "black";
+        aside.style.backgroundImage = "url(../assets/img/icon.ico)";
+        aside.style.display = "block";
+        aside.style.visibility = "hidden";
+
+        //body
+        document.body.style.background = "#000";
+
+        //Title
+        document.title = "Aprendendo JS"
+        document.getElementsByTagName('title')[0].innetText = "Outra forma de alterar o titulo";
+
+
+    </script>
+</body>
+</html>
