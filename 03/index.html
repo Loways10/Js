@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    <h1>Exemplos</h1>
+    <h2 id="id0">Utilizando ByID</h2>
+
+    <!-- Tag com Classes  -->
+    <p class="classe">Utilizando ByClasseName 0</p>
+    <p class="classe">Utilizando ByClasseName 1</p>
+    <p class="classe">Utilizando ByClasseName 2</p>
+    <p class="classe">Utilizando ByClasseName 3</p>
+    <p class="classe">Utilizando ByClasseName 4</p>
+    <span class="classe">Utilizando ByClasseName 5</span>
+
+    <!-- TagName -->
+    <a href="">Link utilizando TagName 0</a>
+    <a href="">Link utilizando TagName 1</a>
+
+    <!-- NAME  -->
+    <input type="text" name="txtName" value="Usando Name 0">
+
+    <!-- SELETOR -->
+    <div>
+        <p>Utilizando Seletor 0</p>
+        <p>Utilizando Seletor 1</p>
+    </div>
+
+    <!-- SELETORES  -->
+    <div class="seletores">
+        <p>Utilizando 0</p>
+        <p>Utilizando 1</p>
+        <p>Utilizando 2</p>
+        <p>Utilizando 3</p>
+        <p>Utilizando 4</p>
+        <p>Utilizando 5</p>
+    </div>
+
+    <!-- JS -->
+
+    <script>
+        // Capturando H@ pelo ID
+        console.log('----- ID -----')
+        var id0 = document.getElementById('id0');
+        console.log(id0.innerText); //innerText só mostra o texto da variavel
+
+        // Capturando H@ pela classe
+        console.log('----- CLASSE -----')
+        var classe = document.getElementsByClassName('classe');//Exibe todos os valores de classe
+        console.log(classe[0].innerHTML);
+        console.log(classe[5].innerHTML);
+        console.log(classe);
+
+        var classe = document.getElementsByClassName('classe')[0];//Exibe só o valor 0, ('classe').length exibe a quantidade de classes
+        console.log("-----------------------------");
+        console.log(classe);
+    
+        // Capturando pela TagName
+        console.log('----- TAGNAME -----');
+        var tagName = document.getElementsByTagName('a');
+        console.log(tagName[tagName.length - 1]); //Pode fazer calculo
+
+        //Capturando Name
+        console.log('----- NAME -----');
+        var txtNome = document.getElementsByName('txtName');
+        console.log(txtNome[0].value); //[0].value pega o primeiro valor que é especificado no html
+
+        //Capturando por seletor
+        console.log('----- SELETOR -----');
+        var parag = document.querySelector('div p'); //sempre trás o primeiro
+        console.log(parag);
+
+        //Capturando por seletores
+        console.log('----- SELETORES -----');
+        var seletores = document.querySelectorAll('.seletores p'); //para trazer apenas um tem que usar [0] depois do parenteses
+        console.log(seletores);
+
+
+    </script>
+</body>
+</html>

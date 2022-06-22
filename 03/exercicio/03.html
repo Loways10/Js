@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.236);
+        }
+        header{
+            height: 50px;
+            text-align: center;
+            font-size: 25pt;
+            color: white;
+            background-color: black;
+        }
+        main{
+            width: 80%;
+            margin: auto;
+            background-color: #ccc;
+            padding: 10px;
+        }
+        main img{
+            width: 50%;
+            height: auto;
+            margin-left: 25%;
+        }
+        main p{
+            font-size: 20pt;
+            text-align: justify;
+        }
+        footer{
+            height: 30px;
+            background-color: black;
+            text-align: center;
+        }
+        footer a{
+            text-decoration: none;
+            color: white;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <header >
+        <span id="t1">Exercício 03</span>
+    </header>
+    <main>
+        <article>
+            <img src="assets/img/logoFundoAzulVGA.jpg" alt="">
+        </article>
+        <article class="art">
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illo, error mollitia iure modi veniam quos fuga dignissimos. Repellendus error aliquid, commodi illo qui consectetur harum. Eum doloribus quam laborum.</p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illo, error mollitia iure modi veniam quos fuga dignissimos. Repellendus error aliquid, commodi illo qui consectetur harum. Eum doloribus quam laborum.</p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illo, error mollitia iure modi veniam quos fuga dignissimos. Repellendus error aliquid, commodi illo qui consectetur harum. Eum doloribus quam laborum.</p>
+            <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae illo, error mollitia iure modi veniam quos fuga dignissimos. Repellendus error aliquid, commodi illo qui consectetur harum. Eum doloribus quam laborum.</p>
+            
+        </article>
+    </main>
+    <footer>
+        <a href="#" id="rod">JS Exercicio 03</a>
+    </footer>
+    
+
+    <script>
+
+        var titulo = document.getElementById('t1');
+        console.log("O Titulo é: " + titulo.innerText);
+
+        var imagem = document.getElementsByTagName('img');
+        console.log("A quantidade de imagem é: " + imagem.length);
+
+        var paragrafo = document.getElementsByClassName('txt');
+        console.log("A quantidade de paragrafos é: " + paragrafo.length
+        );
+
+        var artigo = document.querySelectorAll('.art p');
+        console.log(artigo)
+
+        var rodape = document.getElementById('rod');
+        console.log("O Rodapé é: " + rodape.innerText);
+    </script>
+</body>
+</html>
