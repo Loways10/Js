@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warframe</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            width: 100%;
+            
+        }
+        .cabeca .t1{
+            text-align: center;
+            font-size: 24pt;
+        }
+        .main1 .mainD{
+            width: 60%;
+            height: fit-content;
+            position: absolute;
+            padding: 20px;
+            left: 20%;
+            top: 40%;
+            color: black;
+            background-color: white;
+            text-align: center;
+        }
+        .main1 .mainD .divBut{
+            display: flex;
+        }
+        .main1 .mainD .divTxt{
+            padding: 20px;
+        }
+        .main1 .mainD .divTxt p{
+            padding: 20px;
+        }
+        .main1 .mainD .cadastro{
+            display: none;
+        }
+        .main1 .mainD .logar{
+            display: none;
+        }
+        .main1 .mainD .cadastro .formC{
+            display: flex;
+            flex-direction: column;
+        }
+        #divConectado{
+            display: none;
+            width: 60%;
+            padding: 20px;
+            height: fit-content;
+            position: absolute;
+            left: 20%;
+            top: 40%;
+            color: black;
+            background-color: white;
+            text-align: center;
+        }
+        .foot{
+            text-align: center;
+            position: fixed;
+            bottom: 1px;
+            background-color: white;
+            height: auto;
+            font-size: 16pt;
+        }
+    </style>
+</head>
+<body>
+    <header class="cabeca">
+        <div class="t1">Warframe</div>
+    </header>
+    <main class="main1">
+        <img src="assets/img/warframe.jpg" alt="">
+        <div class="mainD">
+            <div class="divBut">
+                <button id="home" onclick="home(), cadastrohide(), logarhide(),showBackgroundRed('home'), HidebackgroundNotRed('cadastro', 'login')">Home</button>
+                <button id="cadastro" onclick="cadastro(), homehide(), logarhide(), showBackgroundRed('cadastro'), HidebackgroundNotRed('home', 'login')">Cadastro</button>
+                <button id="login" onclick="logar(), homehide(), cadastrohide(), showBackgroundRed('login'), HidebackgroundNotRed('home', 'cadastro')">Logar</button>
+            </div>
+            <section class="divTxt">
+                <h2>Conhece o Warframe?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem non dolore. Similique dolor ut voluptatem exercitationem sapiente praesentium, sequi culpa assumenda voluptatibus odio nihil iure nostrum ab doloribus officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam repellat ipsam hic harum quae sapiente ipsa dolor a odit! Cupiditate impedit minus est aut distinctio corporis itaque doloribus voluptates natus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum autem non dolore. Similique dolor ut voluptatem exercitationem sapiente praesentium, sequi culpa assumenda voluptatibus odio nihil iure nostrum ab doloribus officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eveniet praesentium adipisci, tempore laudantium voluptas aliquam in aliquid nostrum porro veritatis impedit aperiam non provident totam reprehenderit quo. Quis, a?</p>
+            </section>
+            <section class="cadastro">
+                <form action="" class="formC">
+                    <input type="email" name="txtEmail" value="" class="inpB" placeholder="Email">
+                    <input type="text" name="" value="" class="inpB" placeholder="Login">
+                    <input type="password" name="" value="" class="inpB" placeholder="Senha">
+                    <input type="password" name="" value="" class="inpB" placeholder="Confirme a senha">
+                    <button onclick="sucess(), sucess1(), display()" type="button">Cadastrar</button>
+                </form>
+            </section>
+            <section class="logar">
+                <form action="" method="">
+                    Login <input type="text" name="txtLogin" id="">
+                    Senha <input type="password" name="" id="">
+                    <button onclick="sucess(), sucess1(), display2()" type="button">Entrar</button>
+                </form>
+            </section>
+        </div>
+        <div id="divConectado">
+            <section id="conectado">
+                <span id="mostrarEmail"></span>
+                <span id="mostrarLogin"></span>
+                <h2>Cadastro efetuado com Sucesso!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quo iusto, ad, rerum laborum voluptatibus vel exercitationem omnis culpa sint impedit ex nulla deleniti ipsam quisquam temporibus eos itaque necessitatibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut molestiae animi sunt, in natus dolore dolorem laboriosam optio illum. Nemo error quis deleniti. Autem, libero ex est dolore illo repellendus! <a href="https://discord.gg/zDt4kbMXA9" id="discord">Discord</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="foot">
+        <div>Todos os direitos reservados Warframe</div>
+    </footer>
+
+    <script>
+
+        // Botoes
+        function home(){
+            document.getElementsByClassName('divTxt')[0].style.display = "block"
+        }
+        function cadastro(){
+            document.getElementsByClassName('cadastro')[0].style.display = "block"
+        }
+        function logar(){
+            document.getElementsByClassName('logar')[0].style.display = "block"
+        }
+        function homehide(){
+            document.getElementsByClassName('divTxt')[0].style.display = "none"
+        }
+        function cadastrohide(){
+            document.getElementsByClassName('cadastro')[0].style.display = "none"
+        }
+        function logarhide(){
+            document.getElementsByClassName('logar')[0].style.display = "none"
+        }
+        
+        // Fundo vermelho no botão
+        function showBackgroundRed(element){
+            console.log(element)
+            document.getElementById(element).style.backgroundColor = "red"
+        }
+        function HidebackgroundNotRed(element, element2){
+            document.getElementById(element).style.backgroundColor = "white"
+            document.getElementById(element2).style.backgroundColor = "white"
+
+        }
+
+        // Cadastro sucesso + Login Sucesso 
+        function sucess(){
+            console.log("sucesso")
+            document.getElementById('divConectado').style.display = "block"
+        }
+        function sucess1(){
+            document.getElementsByClassName('mainD')[0].style.display = "none"
+        }
+        
+        // Span email ou login
+        function display(){
+            var email1 = document.getElementsByName('txtEmail')[0].value
+            console.log(email1)
+            document.getElementById('mostrarEmail').innerText += email1
+        }
+        function display2(){
+            var login1 = document.getElementsByName('txtLogin')[0].value
+            console.log(login1)
+            document.getElementById('mostrarLogin').innerText += login1
+        }
+        
+
+    </script>
+</body>
+</html>
